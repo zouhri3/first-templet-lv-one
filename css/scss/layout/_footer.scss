@@ -1,0 +1,15 @@
+                /* =======================================start footer======================================= */
+                
+                footer {
+                    background-color: var(--blue-c);
+                    padding: 5px;
+                    p {
+                        @extend %color-p;
+                        @extend %t-c;
+                        text-align: center;
+                        span {
+                            @extend %yelow-c;
+                        }
+                    }
+                }
+                /* =======================================end footer======================================= */

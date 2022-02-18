@@ -1,0 +1,40 @@
+/* ========================================= start heading========================================= */
+
+.heading {
+    font-size: 6.25rem;
+    color: #1998d33d;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 6px;
+    font-style: italic;
+    text-decoration: line-through;
+    margin-top: -22px;
+    @extend %t-c;
+}
+
+.heading+p {
+    text-align: center;
+    @extend %green-c;
+    @extend %t-c;
+}
+
+@include mo {
+    .heading+p {
+        margin-top: -118px;
+    }
+}
+
+@include s-s {
+    .heading+p {
+        margin-top: -131px;
+    }
+}
+
+@include m-s {
+    .heading+p {
+        margin-top: -146px;
+    }
+}
+
+
+/* =========================================end heading========================================= */

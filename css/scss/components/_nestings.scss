@@ -1,0 +1,87 @@
+/* =======================================start nesting======================================= */
+
+// result deafelt
+%list {
+    list-style: none;
+}
+
+%link {
+    text-decoration: none;
+}
+
+// nest groups
+%img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+%transition {
+    transition: all .7s linear;
+    -webkit-transition: all .7s linear;
+    -moz-transition: all .7s linear;
+    -ms-transition: all .7s linear;
+    -o-transition: all .7s linear;
+}
+
+%t-u {
+    text-transform: uppercase;
+}
+
+%t-c {
+    text-transform: capitalize;
+}
+
+%m-au {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%p-a {
+    position: absolute;
+}
+
+%p-r {
+    position: relative;
+}
+
+%c-p {
+    cursor: pointer;
+}
+
+// color
+%blue-c {
+    color: var(--blue-c);
+}
+
+%green-c {
+    color: var(--green-c);
+}
+
+%yelow-c {
+    color: var(--yelow-c);
+}
+
+%white {
+    color: var(--white-c);
+}
+
+%p-overlay {
+    color: var(--color-p-overly);
+}
+
+%color-p {
+    color: var(--color-p);
+}
+
+%padding {
+    padding-top: var(--padding-top);
+    padding-bottom: var( --padding-bottom);
+}
+
+%back-section {
+    background-color: var(--back-box);
+}
+
+
+/* =======================================end nesting======================================= */

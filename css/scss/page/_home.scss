@@ -1,0 +1,376 @@
+            /* =======================================start features======================================= */
+            
+            .features {
+                @extend %padding;
+                @extend %back-section;
+                .feat {
+                    flex-basis: calc(94% / 3);
+                    text-align: center;
+                    i {
+                        @extend %green-c;
+                        font-size: 4.0625rem;
+                    }
+                    h3 {
+                        margin: 20px;
+                    }
+                    p {
+                        @extend %color-p;
+                        text-align: justify;
+                    }
+                }
+            }
+            
+            @include mo {
+                .features {
+                    .grid-box {
+                        flex-direction: column;
+                        .feat {
+                            flex-basis: 100%;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            &:not(:first-child) {
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @include s-s {
+                .features {
+                    .grid-box {
+                        flex-wrap: wrap;
+                        .feat {
+                            flex-basis: calc(94% /2);
+                            &:last-child {
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @include m-s {
+                .features {
+                    .grid-box {
+                        flex-direction: row;
+                        .feat {
+                            flex-basis: calc(94% / 3);
+                            &:not(:first-child) {
+                                margin-top: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            /* =======================================end features======================================= */
+            /* =======================================start services======================================= */
+            
+            .services {
+                @extend %padding;
+                .service-content {
+                    padding-top: 60px;
+                    .service-column {
+                        flex-basis: calc(94% / 3);
+                        .services-box {
+                            i {
+                                font-size: 35px;
+                                align-self: start;
+                                margin: 18px 15px;
+                                color: var(--green-c);
+                                display: block;
+                            }
+                            p {
+                                text-align: justify;
+                                @extend %color-p;
+                            }
+                        }
+                        .box-img {
+                            width: 90%;
+                            @extend %p-r;
+                            &::after {
+                                @extend %p-a;
+                                content: '';
+                                right: -11%;
+                                top: -10%;
+                                width: 20%;
+                                height: 120%;
+                                background-color: var(--blue-c);
+                                border-radius: 25px 0 0 25px;
+                                z-index: -1;
+                            }
+                            img {
+                                @extend %img;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @include mo {
+                .services {
+                    .service-content.grid-box {
+                        flex-direction: column;
+                    }
+                    .service-content {
+                        padding-top: 20px;
+                        .service-column {
+                            flex-basis: calc(100%);
+                            .services-box {
+                                flex-direction: column;
+                                text-align: center;
+                                margin-top: 20px;
+                                i {
+                                    align-self: center;
+                                    margin: 5px;
+                                }
+                            }
+                            &:last-of-type {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @include s-s {
+                .services {
+                    .service-content.grid-box {
+                        flex-direction: row;
+                    }
+                    .service-content {
+                        padding-top: 25px;
+                        .service-column {
+                            flex-basis: calc(94% / 2);
+                            .services-box {
+                                margin-top: 25px;
+                            }
+                            &:last-of-type {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @include m-s {
+                .services {
+                    .service-content.grid-box {
+                        flex-direction: row;
+                    }
+                    .service-content {
+                        padding-top: 30px;
+                        .service-column {
+                            flex-basis: calc(91% / 3);
+                            .services-box {
+                                margin-top: 30px;
+                            }
+                            &:last-of-type {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            /* =======================================end services======================================= */
+            /* =======================================start portfolio======================================= */
+            
+            .portfolio {
+                @extend %padding;
+                @extend %back-section;
+                .portfolio-content {
+                    padding-top: 65px;
+                    .portfolio-column {
+                        flex-basis: calc(91% / 3);
+                        background-color: var(--white-c);
+                        img {
+                            @extend %img;
+                            height: 300px;
+                        }
+                        h3 {
+                            margin: 10px 15px;
+                            padding-top: 20px;
+                        }
+                        .box-img {
+                            margin-bottom: 0;
+                        }
+                        p {
+                            text-align: justify;
+                            @extend %color-p;
+                            margin: auto 15px;
+                            letter-spacing: 1.2px;
+                        }
+                    }
+                }
+            }
+            
+            @include mo {
+                .portfolio-content.grid-box {
+                    flex-direction: column;
+                }
+                .portfolio {
+                    .portfolio-content {
+                        padding-top: 20px;
+                        .portfolio-column {
+                            margin-top: 45px;
+                            display: flex;
+                            align-items: center;
+                            .box-img {
+                                flex-basis: calc(100% / 2);
+                                border-radius: 0 25px 25px 0;
+                                -webkit-border-radius: 0 25px 25px 0;
+                                -moz-border-radius: 0 25px 25px 0;
+                                -ms-border-radius: 0 25px 25px 0;
+                                -o-border-radius: 0 25px 25px 0;
+                                overflow: hidden;
+                                margin-bottom: -3px;
+                                img {
+                                    height: 155px;
+                                }
+                            }
+                            h3 {
+                                padding-top: 0;
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            /* =======================================end portfolio======================================= */
+            /* =======================================start about======================================= */
+            
+            .about {
+                @extend %padding;
+                .about-content {
+                    padding-top: 65px;
+                    .about-column {
+                        flex-basis: calc(90% / 2);
+                        .box-img {
+                            width: 80%;
+                            @extend %p-r;
+                            margin-left: 9%;
+                            margin-bottom: 6%;
+                            margin-top: 11%;
+                            height: 300px;
+                            &::after {
+                                @extend %p-a;
+                                content: '';
+                                left: -11%;
+                                top: -10%;
+                                width: 20%;
+                                height: 120%;
+                                background-color: var(--blue-c);
+                                border-radius: 25px 0 0 25px;
+                                z-index: -1;
+                            }
+                            &::before {
+                                @extend %p-a;
+                                content: '';
+                                right: -28%;
+                                top: -10%;
+                                width: 20%;
+                                height: 75%;
+                                border-radius: 25px 0 25px 0;
+                                border-left: 80px solid var(--green-c);
+                                border-bottom: 65px solid var(--green-c);
+                                z-index: -1;
+                            }
+                            img {
+                                @extend %img;
+                            }
+                        }
+                        p {
+                            &:first-of-type {
+                                font-weight: bold;
+                                line-height: 2;
+                                text-align: justify;
+                            }
+                            &:last-of-type {
+                                line-height: 1.7;
+                                @extend %color-p;
+                                font-size: .7rem;
+                            }
+                        }
+                        hr {
+                            width: 50%;
+                            display: inline-block;
+                            border: 1px solid var(--green-c);
+                        }
+                    }
+                }
+            }
+            
+            @include mo {
+                .about {
+                    .about-content {
+                        padding-top: 20px;
+                        flex-direction: column;
+                        .about-column {
+                            flex-basis: 100%;
+                            .box-img {
+                                width: 300px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                margin-bottom: 6%;
+                                margin-top: 11%;
+                                &::after {
+                                    display: none;
+                                }
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                            p {
+                                &:first-of-type {
+                                    text-align: center;
+                                }
+                                &:last-of-type {
+                                    text-align: center;
+                                }
+                            }
+                            hr {
+                                display: block;
+                                text-align: center;
+                                margin: 25px auto;
+                            }
+                        }
+                    }
+                }
+            }
+            /* =======================================end about======================================= */
+            /* =======================================start contact======================================= */
+            
+            .contact {
+                @extend %padding;
+                @extend %back-section;
+                .contact-content {
+                    padding-top: 65px;
+                    p.label {
+                        &:first-of-type {
+                            font-size: 2rem;
+                            @extend %blue-c;
+                            @extend %t-c;
+                            font-weight: 800;
+                            letter-spacing: -1px;
+                            word-spacing: 1px;
+                        }
+                    }
+                    a {
+                        display: block;
+                        font-size: 1.5rem;
+                        @extend %green-c;
+                        @extend %link;
+                        font-weight: 800;
+                    }
+                    p {
+                        @extend %color-p;
+                        display: inline-block;
+                    }
+                    i {
+                        display: inline-block;
+                        @extend%yelow-c;
+                        @extend%c-p;
+                    }
+                }
+            }
+            /* =======================================end contact======================================= */

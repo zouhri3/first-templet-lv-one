@@ -1,0 +1,227 @@
+/* =======================================start header======================================= */
+
+header {
+    @extend %padding;
+    @extend %p-r;
+    height: 100vh;
+    background-image: url('../image/1 (2).jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    .head {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 15px;
+        @extend %transition;
+        width: 100%;
+        z-index: 5555555555555555;
+        .logo {
+            @extend %p-a;
+            @extend %t-u;
+            @extend %link;
+            @extend %yelow-c;
+            letter-spacing: 4px;
+            font-weight: 800;
+            font-size: 1.875rem;
+            left: 7.5%;
+            width: 40%;
+            @extend %transition;
+            span {
+                @extend %green-c;
+            }
+        }
+        nav {
+            ul {
+                @extend %transition;
+                @extend %p-a;
+                @extend %list;
+                @extend %t-c;
+                font-size: 1.1rem;
+                flex-wrap: wrap;
+                letter-spacing: 2px;
+                right: 7.5%;
+            }
+            li {
+                display: block;
+                position: relative;
+                a {
+                    @extend %link;
+                    @extend %yelow-c;
+                    font-style: italic;
+                    @extend %transition;
+                    padding: 5px 0px;
+                    display: block;
+                    position: relative;
+                }
+            }
+            @include mo {
+                ul {
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    background: var(--blue-c);
+                    top: 62px;
+                    width: 0;
+                    align-content: start;
+                    align-items: flex-start;
+                    height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                    &.show {
+                        width: 85%;
+                        height: 65vh;
+                        opacity: 1;
+                    }
+                    &.hide {
+                        width: 0;
+                        height: 0;
+                        opacity: 0;
+                    }
+                }
+            }
+            @include s-s {
+                ul {
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    background: var(--blue-c);
+                    top: 62px;
+                    width: 0;
+                    align-content: start;
+                    align-items: flex-start;
+                    height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                    &.show {
+                        width: 85%;
+                        height: 65vh;
+                        opacity: 1;
+                    }
+                    &.hide {
+                        width: 0;
+                        height: 0;
+                        opacity: 0;
+                    }
+                }
+            }
+            @include m-s {
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    background: none;
+                    top: auto;
+                    align-content: start;
+                    align-items: center;
+                    width: 50%;
+                    justify-content: space-between;
+                    height: auto;
+                    opacity: 1;
+                    &.show {
+                        width: 50%;
+                        height: auto;
+                        opacity: 1;
+                    }
+                    &.hide {
+                        width: 50%;
+                        height: auto;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .fa {
+            display: block;
+            position: absolute;
+            right: 7.5%;
+            font-size: 1.875rem;
+            @extend %yelow-c;
+            @extend %c-p;
+        }
+        @include mo {
+            .fa {
+                display: block;
+            }
+        }
+        @include s-s {
+            .fa {
+                display: block;
+            }
+        }
+        @include m-s {
+            .fa {
+                display: none;
+            }
+        }
+        &.head-change {
+            padding: 30px;
+            background-color: var(--white-c);
+            @extend %transition;
+            .logo {
+                font-size: 1.775rem;
+                @extend %transition;
+                font-weight: 700;
+            }
+            nav {
+                &::before {
+                    @extend %transition;
+                    top: 39px;
+                }
+            }
+            ul {
+                font-size: 1rem;
+                @extend %transition;
+                a {
+                    @extend %transition;
+                }
+            }
+            @include mo {
+                ul {
+                    top: 44px;
+                    font-size: 1.1rem;
+                }
+            }
+            @include s-s {
+                ul {
+                    top: 44px;
+                    font-size: 1.1rem;
+                }
+            }
+            @include m-s {
+                ul {
+                    top: auto;
+                }
+            }
+        }
+    }
+}
+
+.slider {
+    width: 450px;
+    text-align: center;
+    transform: translateY(35vh);
+    -webkit-transform: translateY(35vh);
+    -moz-transform: translateY(35vh);
+    -ms-transform: translateY(35vh);
+    -o-transform: translateY(35vh);
+    @extend %m-au;
+    h1 {
+        @extend %t-c;
+        @extend %green-c;
+        @extend %t-c;
+        margin: 0;
+        font-size: 900;
+        letter-spacing: 6px;
+        font-size: 3.75rem;
+    }
+    p {
+        @extend %p-overlay;
+    }
+    @include mo {
+        width: auto;
+        h1 {
+            font-size: 2.75rem;
+        }
+    }
+}
+
+
+/* =======================================start header======================================= */

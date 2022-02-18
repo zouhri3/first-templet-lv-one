@@ -1,0 +1,862 @@
+/* 
+----------------------------------------------------------------------------
+name ===========> youssef zouhri
+gmail===========>profilede99@gmail.com
+phone===========>0641452606
+
+----------------------------------------------------------------------------
+ */
+
+:root {
+    /* color */
+    --blue-c: #1998d3;
+    --heading-c: #1998d3;
+    --back-box: #1998d314;
+    --green-c: #41a592;
+    --yelow-c: #f6ce4b;
+    --white-c: #fff;
+    --blank-overlay: #000000c5;
+    --color-p-overly: rgba(255, 255, 255, 0.33);
+    --color-p: rgba(0, 0, 0, 0.58);
+    /* padding */
+    --padding-top: 65px;
+    --padding-bottom: 65px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 767px) {
+    html,
+    body {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) {
+    html,
+    body {
+        font-size: 14.5px;
+    }
+}
+
+@media (min-width: 970px) {
+    html,
+    body {
+        font-size: 16px;
+    }
+}
+
+
+/* ========================================= start grid system========================================= */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 970px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1170px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.grid-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blank-overlay);
+}
+
+p {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 1.15625rem;
+}
+
+
+/* ======================================== end grid system===================================== */
+
+
+/* =======================================start nesting======================================= */
+
+header .head nav ul {
+    list-style: none;
+}
+
+header .head .logo,
+header .head nav li a,
+.contact .contact-content a {
+    text-decoration: none;
+}
+
+.services .service-content .service-column .box-img img,
+.portfolio .portfolio-content .portfolio-column img,
+.about .about-content .about-column .box-img img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+header .head,
+header .head .logo,
+header .head nav ul,
+header .head nav li a,
+header .head.head-change,
+header .head.head-change .logo,
+header .head.head-change nav::before,
+header .head.head-change ul,
+header .head.head-change ul a {
+    transition: all .7s linear;
+    -webkit-transition: all .7s linear;
+    -moz-transition: all .7s linear;
+    -ms-transition: all .7s linear;
+    -o-transition: all .7s linear;
+}
+
+header .head .logo {
+    text-transform: uppercase;
+}
+
+h3,
+header .head nav ul,
+.slider h1,
+.heading,
+.heading+p,
+.contact .contact-content p.label:first-of-type,
+footer p {
+    text-transform: capitalize;
+}
+
+.container,
+.slider {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .head .logo,
+header .head nav ul,
+.services .service-content .service-column .box-img::after,
+.about .about-content .about-column .box-img::after,
+.about .about-content .about-column .box-img::before {
+    position: absolute;
+}
+
+header,
+.services .service-content .service-column .box-img,
+.about .about-content .about-column .box-img {
+    position: relative;
+}
+
+header .head .fa,
+.contact .contact-content i {
+    cursor: pointer;
+}
+
+h3,
+.contact .contact-content p.label:first-of-type {
+    color: var(--blue-c);
+}
+
+header .head .logo span,
+.slider h1,
+.heading+p,
+.features .feat i,
+.contact .contact-content a {
+    color: var(--green-c);
+}
+
+header .head .logo,
+header .head nav li a,
+header .head .fa,
+.contact .contact-content i,
+footer p span {
+    color: var(--yelow-c);
+}
+
+.slider p {
+    color: var(--color-p-overly);
+}
+
+.features .feat p,
+.services .service-content .service-column .services-box p,
+.portfolio .portfolio-content .portfolio-column p,
+.about .about-content .about-column p:last-of-type,
+.contact .contact-content p,
+footer p {
+    color: var(--color-p);
+}
+
+header,
+.features,
+.services,
+.portfolio,
+.about,
+.contact {
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+
+.features,
+.portfolio,
+.contact {
+    background-color: var(--back-box);
+}
+
+
+/* =======================================end nesting======================================= */
+
+
+/* =======================================start header======================================= */
+
+header {
+    height: 100vh;
+    background-image: url("../image/1 (2).jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header .head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 15px;
+    width: 100%;
+    z-index: 5555555555555555;
+}
+
+header .head .logo {
+    letter-spacing: 4px;
+    font-weight: 800;
+    font-size: 1.875rem;
+    left: 7.5%;
+    width: 40%;
+}
+
+header .head nav ul {
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+    letter-spacing: 2px;
+    right: 7.5%;
+}
+
+header .head nav li {
+    display: block;
+    position: relative;
+}
+
+header .head nav li a {
+    font-style: italic;
+    padding: 5px 0px;
+    display: block;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    header .head nav ul {
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: var(--blue-c);
+        top: 62px;
+        width: 0;
+        align-content: start;
+        align-items: flex-start;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+    header .head nav ul.show {
+        width: 85%;
+        height: 65vh;
+        opacity: 1;
+    }
+    header .head nav ul.hide {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    header .head nav ul {
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: var(--blue-c);
+        top: 62px;
+        width: 0;
+        align-content: start;
+        align-items: flex-start;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+    header .head nav ul.show {
+        width: 85%;
+        height: 65vh;
+        opacity: 1;
+    }
+    header .head nav ul.hide {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@media (min-width: 970px) {
+    header .head nav ul {
+        display: flex;
+        flex-direction: row;
+        background: none;
+        top: auto;
+        align-content: start;
+        align-items: center;
+        width: 50%;
+        justify-content: space-between;
+        height: auto;
+        opacity: 1;
+    }
+    header .head nav ul.show {
+        width: 50%;
+        height: auto;
+        opacity: 1;
+    }
+    header .head nav ul.hide {
+        width: 50%;
+        height: auto;
+        opacity: 1;
+    }
+}
+
+header .head .fa {
+    display: block;
+    position: absolute;
+    right: 7.5%;
+    font-size: 1.875rem;
+}
+
+@media (max-width: 767px) {
+    header .head .fa {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    header .head .fa {
+        display: block;
+    }
+}
+
+@media (min-width: 970px) {
+    header .head .fa {
+        display: none;
+    }
+}
+
+header .head.head-change {
+    padding: 30px;
+    background-color: var(--white-c);
+}
+
+header .head.head-change .logo {
+    font-size: 1.775rem;
+    font-weight: 700;
+}
+
+header .head.head-change nav::before {
+    top: 39px;
+}
+
+header .head.head-change ul {
+    font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+    header .head.head-change ul {
+        top: 44px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    header .head.head-change ul {
+        top: 44px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 970px) {
+    header .head.head-change ul {
+        top: auto;
+    }
+}
+
+.slider {
+    width: 450px;
+    text-align: center;
+    transform: translateY(35vh);
+    -webkit-transform: translateY(35vh);
+    -moz-transform: translateY(35vh);
+    -ms-transform: translateY(35vh);
+    -o-transform: translateY(35vh);
+}
+
+.slider h1 {
+    margin: 0;
+    font-size: 900;
+    letter-spacing: 6px;
+    font-size: 3.75rem;
+}
+
+@media (max-width: 767px) {
+    .slider {
+        width: auto;
+    }
+    .slider h1 {
+        font-size: 2.75rem;
+    }
+}
+
+
+/* =======================================start header======================================= */
+
+
+/* ========================================= start heading========================================= */
+
+.heading {
+    font-size: 6.25rem;
+    color: #1998d33d;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 6px;
+    font-style: italic;
+    text-decoration: line-through;
+    margin-top: -22px;
+}
+
+.heading+p {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .heading+p {
+        margin-top: -118px;
+    }
+}
+
+@media (min-width: 768px) {
+    .heading+p {
+        margin-top: -131px;
+    }
+}
+
+@media (min-width: 970px) {
+    .heading+p {
+        margin-top: -146px;
+    }
+}
+
+
+/* =========================================end heading========================================= */
+
+
+/* =======================================start features======================================= */
+
+.features .feat {
+    flex-basis: calc(94% / 3);
+    text-align: center;
+}
+
+.features .feat i {
+    font-size: 4.0625rem;
+}
+
+.features .feat h3 {
+    margin: 20px;
+}
+
+.features .feat p {
+    text-align: justify;
+}
+
+@media (max-width: 767px) {
+    .features .grid-box {
+        flex-direction: column;
+    }
+    .features .grid-box .feat {
+        flex-basis: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .features .grid-box .feat:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .features .grid-box {
+        flex-wrap: wrap;
+    }
+    .features .grid-box .feat {
+        flex-basis: calc(94% /2);
+    }
+    .features .grid-box .feat:last-child {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 970px) {
+    .features .grid-box {
+        flex-direction: row;
+    }
+    .features .grid-box .feat {
+        flex-basis: calc(94% / 3);
+    }
+    .features .grid-box .feat:not(:first-child) {
+        margin-top: auto;
+    }
+}
+
+
+/* =======================================end features======================================= */
+
+
+/* =======================================start services======================================= */
+
+.services .service-content {
+    padding-top: 60px;
+}
+
+.services .service-content .service-column {
+    flex-basis: calc(94% / 3);
+}
+
+.services .service-content .service-column .services-box i {
+    font-size: 35px;
+    align-self: start;
+    margin: 18px 15px;
+    color: var(--green-c);
+    display: block;
+}
+
+.services .service-content .service-column .services-box p {
+    text-align: justify;
+}
+
+.services .service-content .service-column .box-img {
+    width: 90%;
+}
+
+.services .service-content .service-column .box-img::after {
+    content: '';
+    right: -11%;
+    top: -10%;
+    width: 20%;
+    height: 120%;
+    background-color: var(--blue-c);
+    border-radius: 25px 0 0 25px;
+    z-index: -1;
+}
+
+@media (max-width: 767px) {
+    .services .service-content.grid-box {
+        flex-direction: column;
+    }
+    .services .service-content {
+        padding-top: 20px;
+    }
+    .services .service-content .service-column {
+        flex-basis: calc(100%);
+    }
+    .services .service-content .service-column .services-box {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .services .service-content .service-column .services-box i {
+        align-self: center;
+        margin: 5px;
+    }
+    .services .service-content .service-column:last-of-type {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .services .service-content.grid-box {
+        flex-direction: row;
+    }
+    .services .service-content {
+        padding-top: 25px;
+    }
+    .services .service-content .service-column {
+        flex-basis: calc(94% / 2);
+    }
+    .services .service-content .service-column .services-box {
+        margin-top: 25px;
+    }
+    .services .service-content .service-column:last-of-type {
+        display: none;
+    }
+}
+
+@media (min-width: 970px) {
+    .services .service-content.grid-box {
+        flex-direction: row;
+    }
+    .services .service-content {
+        padding-top: 30px;
+    }
+    .services .service-content .service-column {
+        flex-basis: calc(91% / 3);
+    }
+    .services .service-content .service-column .services-box {
+        margin-top: 30px;
+    }
+    .services .service-content .service-column:last-of-type {
+        display: block;
+    }
+}
+
+
+/* =======================================end services======================================= */
+
+
+/* =======================================start portfolio======================================= */
+
+.portfolio .portfolio-content {
+    padding-top: 65px;
+}
+
+.portfolio .portfolio-content .portfolio-column {
+    flex-basis: calc(91% / 3);
+    background-color: var(--white-c);
+}
+
+.portfolio .portfolio-content .portfolio-column img {
+    height: 300px;
+}
+
+.portfolio .portfolio-content .portfolio-column h3 {
+    margin: 10px 15px;
+    padding-top: 20px;
+}
+
+.portfolio .portfolio-content .portfolio-column .box-img {
+    margin-bottom: 0;
+}
+
+.portfolio .portfolio-content .portfolio-column p {
+    text-align: justify;
+    margin: auto 15px;
+    letter-spacing: 1.2px;
+}
+
+@media (max-width: 767px) {
+    .portfolio-content.grid-box {
+        flex-direction: column;
+    }
+    .portfolio .portfolio-content {
+        padding-top: 20px;
+    }
+    .portfolio .portfolio-content .portfolio-column {
+        margin-top: 45px;
+        display: flex;
+        align-items: center;
+    }
+    .portfolio .portfolio-content .portfolio-column .box-img {
+        flex-basis: calc(100% / 2);
+        border-radius: 0 25px 25px 0;
+        -webkit-border-radius: 0 25px 25px 0;
+        -moz-border-radius: 0 25px 25px 0;
+        -ms-border-radius: 0 25px 25px 0;
+        -o-border-radius: 0 25px 25px 0;
+        overflow: hidden;
+        margin-bottom: -3px;
+    }
+    .portfolio .portfolio-content .portfolio-column .box-img img {
+        height: 155px;
+    }
+    .portfolio .portfolio-content .portfolio-column h3 {
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+
+/* =======================================end portfolio======================================= */
+
+
+/* =======================================start about======================================= */
+
+.about .about-content {
+    padding-top: 65px;
+}
+
+.about .about-content .about-column {
+    flex-basis: calc(90% / 2);
+}
+
+.about .about-content .about-column .box-img {
+    width: 80%;
+    margin-left: 9%;
+    margin-bottom: 6%;
+    margin-top: 11%;
+    height: 300px;
+}
+
+.about .about-content .about-column .box-img::after {
+    content: '';
+    left: -11%;
+    top: -10%;
+    width: 20%;
+    height: 120%;
+    background-color: var(--blue-c);
+    border-radius: 25px 0 0 25px;
+    z-index: -1;
+}
+
+.about .about-content .about-column .box-img::before {
+    content: '';
+    right: -28%;
+    top: -10%;
+    width: 20%;
+    height: 75%;
+    border-radius: 25px 0 25px 0;
+    border-left: 80px solid var(--green-c);
+    border-bottom: 65px solid var(--green-c);
+    z-index: -1;
+}
+
+.about .about-content .about-column p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    text-align: justify;
+}
+
+.about .about-content .about-column p:last-of-type {
+    line-height: 1.7;
+    font-size: .7rem;
+}
+
+.about .about-content .about-column hr {
+    width: 50%;
+    display: inline-block;
+    border: 1px solid var(--green-c);
+}
+
+@media (max-width: 767px) {
+    .about .about-content {
+        padding-top: 20px;
+        flex-direction: column;
+    }
+    .about .about-content .about-column {
+        flex-basis: 100%;
+    }
+    .about .about-content .about-column .box-img {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6%;
+        margin-top: 11%;
+    }
+    .about .about-content .about-column .box-img::after {
+        display: none;
+    }
+    .about .about-content .about-column .box-img::before {
+        display: none;
+    }
+    .about .about-content .about-column p:first-of-type {
+        text-align: center;
+    }
+    .about .about-content .about-column p:last-of-type {
+        text-align: center;
+    }
+    .about .about-content .about-column hr {
+        display: block;
+        text-align: center;
+        margin: 25px auto;
+    }
+}
+
+
+/* =======================================end about======================================= */
+
+
+/* =======================================start contact======================================= */
+
+.contact .contact-content {
+    padding-top: 65px;
+}
+
+.contact .contact-content p.label:first-of-type {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+}
+
+.contact .contact-content a {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.contact .contact-content p {
+    display: inline-block;
+}
+
+.contact .contact-content i {
+    display: inline-block;
+}
+
+
+/* =======================================end contact======================================= */
+
+
+/* =======================================start footer======================================= */
+
+footer {
+    background-color: var(--blue-c);
+    padding: 5px;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+/* =======================================end footer======================================= */

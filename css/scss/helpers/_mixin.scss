@@ -1,0 +1,30 @@
+@mixin pre($pro, $val, $pref :()) {
+    @each $p in $pref {
+        #{'-' + $p +'-'+$pro }: $val;
+    }
+    #{$pro}:$val;
+}
+
+@mixin mo {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin s-s {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin m-s {
+    @media (min-width: 970px) {
+        @content;
+    }
+}
+
+@mixin l-s {
+    @media (min-width: 1170px) {
+        @content;
+    }
+}

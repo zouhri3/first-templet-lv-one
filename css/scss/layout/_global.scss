@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+@include mo {
+    html,
+    body {
+        font-size: 13px;
+    }
+}
+
+@include s-s {
+    html,
+    body {
+        font-size: 14.5px;
+    }
+}
+
+@include m-s {
+    html,
+    body {
+        font-size: 16px;
+    }
+}
